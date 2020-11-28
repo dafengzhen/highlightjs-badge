@@ -352,7 +352,7 @@ function highlightJsBadge(opt) {
             "</style>",
             "<div id=\"CodeBadgeTemplate\" style=\"display:none\">",
             "    <div class=\"code-badge\">",
-            "        <div class=\"code-badge-language\" >{{language}}</div>",
+            "        <!--<div class=\"code-badge-language\" >{{language}}</div>-->",
             "        <div  title=\"Copy to clipboard\">",
             "            <i class=\"{{copyIconClass}} code-badge-copy-icon\"></i></i></a>",            
             "        </div>",
@@ -433,7 +433,7 @@ if (highlightJsBadgeAutoLoad)
         padding: 0 7px;
         margin-top:2;
     }
-    .fa.text-success:{ color: limegreen !important}    
+    .fa.text-success { color: limegreen !important}    
 </style>
 <div id="CodeBadgeTemplate" style="display:none">
     <div class="code-badge">
