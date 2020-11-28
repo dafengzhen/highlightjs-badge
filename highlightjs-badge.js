@@ -95,6 +95,9 @@ if (typeof highlightJsBadgeAutoLoad !== 'boolean')
 
 function highlightJsBadge(opt) {
     var options = {
+        // the selector for the pre query
+        codeSelector: 'pre>code',
+
         // the selector for the badge template
         templateSelector: "#CodeBadgeTemplate",
 
@@ -151,7 +154,7 @@ function highlightJsBadge(opt) {
       
         var hudText = document.querySelector(options.templateSelector).innerHTML;
 
-        var $codes = document.querySelectorAll("pre>code.hljs");        
+        var $codes = document.querySelectorAll(options.codeSelector + ".hljs");        
         for (var index = 0; index < $codes.length; index++) {
             var el = $codes[index];
             if (el.querySelector(".code-badge"))
@@ -243,7 +246,7 @@ function highlightJsBadge(opt) {
         var $origCode = e.srcElement.parentElement.parentElement.parentElement;
     
         // select the <code> tag and grab text
-        var $code = $origCode.querySelector("pre>code");
+        var $code = $origCode.querySelector(options.codeSelector);
         var text = $code.textContent || $code.innerText;
         
         if (options.onBeforeCodeCopied)

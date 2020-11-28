@@ -8,6 +8,10 @@
     "browser-sync": "^2.26.12",
     "uglify-js": "^3.10.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdgamble555/highlightjs-badge.git"
+  },
   "scripts": {
     "build": "uglifyjs --compress --mangle -o highlightjs-badge.min.js  -- highlightjs-badge.js",
     "start": "browser-sync start --server --files '*.htm*, *.css, *.js' --port 5021",
