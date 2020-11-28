@@ -348,7 +348,7 @@ function highlightJsBadge(opt) {
             "        padding: 0 7px;",
             "        margin-top:2;",
             "    }",
-            "    .fa.text-success:{ color: limegreen !important }",
+            "    .fa.text-success { color: limegreen !important }",
             "</style>",
             "<div id=\"CodeBadgeTemplate\" style=\"display:none\">",
             "    <div class=\"code-badge\">",
